@@ -1,0 +1,248 @@
+{
+    "global": {
+        "show_in_menu_bar": false,
+        "show_profile_name_in_menu_bar": true
+    },
+    "profiles": [
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "manipulators": [
+                            {
+                                "description": "Change caps_lock to command+shift+caps_lock：.",
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": ["left_command", "left_shift", "caps_lock"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "devices": [
+                {
+                    "identifiers": { "is_keyboard": true },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "b" },
+                            "to": [{ "key_code": "hyphen" }]
+                        },
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                        },
+                        {
+                            "from": { "key_code": "comma" },
+                            "to": [{ "key_code": "f" }]
+                        },
+                        {
+                            "from": { "key_code": "f" },
+                            "to": [{ "key_code": "t" }]
+                        },
+                        {
+                            "from": { "key_code": "grave_accent_and_tilde" },
+                            "to": [{ "key_code": "non_us_backslash" }]
+                        },
+                        {
+                            "from": { "key_code": "hyphen" },
+                            "to": [{ "key_code": "semicolon" }]
+                        },
+                        {
+                            "from": { "key_code": "j" },
+                            "to": [{ "key_code": "n" }]
+                        },
+                        {
+                            "from": { "key_code": "n" },
+                            "to": [{ "key_code": "b" }]
+                        },
+                        {
+                            "from": { "key_code": "period" },
+                            "to": [{ "key_code": "q" }]
+                        },
+                        {
+                            "from": { "key_code": "q" },
+                            "to": [{ "key_code": "j" }]
+                        },
+                        {
+                            "from": { "key_code": "semicolon" },
+                            "to": [{ "key_code": "w" }]
+                        },
+                        {
+                            "from": { "key_code": "t" },
+                            "to": [{ "key_code": "comma" }]
+                        },
+                        {
+                            "from": { "key_code": "u" },
+                            "to": [{ "key_code": "y" }]
+                        },
+                        {
+                            "from": { "key_code": "w" },
+                            "to": [{ "key_code": "u" }]
+                        },
+                        {
+                            "from": { "key_code": "y" },
+                            "to": [{ "key_code": "period" }]
+                        }
+                    ]
+                }
+            ],
+            "fn_function_keys": [
+                {
+                    "from": { "key_code": "f3" },
+                    "to": [{ "key_code": "caps_lock" }]
+                }
+            ],
+            "name": "pisces0.1",
+            "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }
+        },
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "右command 単押しで Ctrl+M（日本語入力中のみ）",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "^ja$" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_command",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "right_command" }],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "m",
+                                        "modifiers": ["control"],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "test",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "mandatory": ["left_shift"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "page_down",
+                                        "modifiers": []
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "mandatory": ["right_shift"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "apple_vendor_keyboard_key_code": "mission_control",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fn_function_keys": [
+                {
+                    "from": { "key_code": "f3" },
+                    "to": [{ "key_code": "caps_lock" }]
+                }
+            ],
+            "name": "Pisces0.2",
+            "selected": true,
+            "simple_modifications": [
+                {
+                    "from": { "key_code": "b" },
+                    "to": [{ "key_code": "hyphen" }]
+                },
+                {
+                    "from": { "key_code": "caps_lock" },
+                    "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                },
+                {
+                    "from": { "key_code": "comma" },
+                    "to": [{ "key_code": "f" }]
+                },
+                {
+                    "from": { "key_code": "f" },
+                    "to": [{ "key_code": "t" }]
+                },
+                {
+                    "from": { "key_code": "hyphen" },
+                    "to": [{ "key_code": "semicolon" }]
+                },
+                {
+                    "from": { "key_code": "j" },
+                    "to": [{ "key_code": "n" }]
+                },
+                {
+                    "from": { "key_code": "n" },
+                    "to": [{ "key_code": "b" }]
+                },
+                {
+                    "from": { "key_code": "period" },
+                    "to": [{ "key_code": "q" }]
+                },
+                {
+                    "from": { "key_code": "q" },
+                    "to": [{ "key_code": "j" }]
+                },
+                {
+                    "from": { "key_code": "semicolon" },
+                    "to": [{ "key_code": "w" }]
+                },
+                {
+                    "from": { "key_code": "t" },
+                    "to": [{ "key_code": "comma" }]
+                },
+                {
+                    "from": { "key_code": "u" },
+                    "to": [{ "key_code": "y" }]
+                },
+                {
+                    "from": { "key_code": "w" },
+                    "to": [{ "key_code": "u" }]
+                },
+                {
+                    "from": { "key_code": "y" },
+                    "to": [{ "key_code": "period" }]
+                }
+            ],
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        },
+        {
+            "name": "Default",
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        }
+    ]
+}
