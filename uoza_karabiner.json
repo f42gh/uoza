@@ -10,7 +10,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Change caps_lock to command+shift+caps_lock：.",
+                                "description": "Change caps_lock to command+shift+caps_lock",
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": { "optional": ["any"] }
