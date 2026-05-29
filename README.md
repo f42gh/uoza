@@ -129,5 +129,4 @@ Karabiner-Elements のメイン設定として使う場合は、通常の `karab
 
 ## メモ
 
-- ユーザー指定では `uoza-karaniter.json` となっていましたが、実ファイル名は `uoza_karabiner.json` です
-- description 文字列の一部に不自然な記号や表記ゆれがありますが、JSON の設定自体は読める状態です
+- `caps_lock` の description にあった末尾の不要な記号（`：.`）を修正しました
